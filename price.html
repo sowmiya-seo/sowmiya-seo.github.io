@@ -41,25 +41,20 @@ nav ul a.cta:hover{color:#fff;background:#095a51}
 .hero p{font-size:1.15rem;color:#c9d3e6;max-width:38em;margin:0}
 section{padding:52px 0 8px}
 h2{font:600 1.8rem/1.2 var(--serif);margin:0 0 14px}
-h3{font:600 1.5rem/1.25 var(--serif);margin:0 0 4px}
-h4{font-size:1rem;margin:0 0 2px}
+h3{font:600 1.35rem/1.25 var(--serif);margin:0 0 4px}
 p{margin:0 0 14px;max-width:68ch}
 ul{margin:0 0 14px;padding-left:1.15em}
-li{margin-bottom:4px}
+li{margin-bottom:6px}
 .lead{color:var(--muted)}
-.plan{background:var(--surface);border:1px solid var(--line);border-top:5px solid var(--accent);padding:30px;margin-bottom:28px}
-.plan .head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:12px 24px;margin-bottom:6px}
-.plan .type{display:inline-block;background:var(--accent-soft);color:var(--accent);font-weight:600;font-size:.88rem;padding:3px 12px;margin-bottom:10px}
-.price{font:600 1.8rem/1.2 var(--serif);margin:0;text-align:right}
-.per{display:block;font:400 .95rem var(--sans);color:var(--muted)}
-.quote{font:italic 500 1.12rem/1.5 var(--serif);color:var(--muted);margin:6px 0 20px}
-.label{font-weight:600;margin:20px 0 12px;padding-top:16px;border-top:1px solid var(--line)}
-.groups{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px 28px}
-.goal{color:var(--accent);font-size:.92rem;font-weight:600;margin:0 0 8px}
-.get{background:var(--accent-soft);border-left:4px solid var(--accent);padding:16px 20px;margin:8px 0 18px}
-.get ul{margin:6px 0 0;columns:2;column-gap:28px}
-.base{background:var(--accent-soft);border-left:4px solid var(--accent);padding:14px 18px;margin:0 0 4px}
-.btn{display:inline-block;background:var(--accent);color:#fff;padding:12px 22px;font-weight:600;text-decoration:none}
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:stretch}
+.plan{background:var(--surface);border:1px solid var(--line);border-top:5px solid var(--accent);padding:26px;display:flex;flex-direction:column}
+.plan .type{align-self:flex-start;background:var(--accent-soft);color:var(--accent);font-weight:600;font-size:.88rem;padding:3px 12px;margin-bottom:10px}
+.price{font:600 1.7rem/1.2 var(--serif);margin:10px 0 2px}
+.per{color:var(--muted);font-size:.95rem;margin-bottom:14px}
+.quote{font:italic 500 1.05rem/1.5 var(--serif);color:var(--muted)}
+.plan ul{flex:1}
+.plan .more{margin:0 0 16px}
+.btn{display:inline-block;background:var(--accent);color:#fff;padding:12px 20px;font-weight:600;text-decoration:none;text-align:center}
 .btn:hover{background:#095a51}
 .tablewrap{overflow-x:auto;background:var(--surface);border:1px solid var(--line)}
 table{border-collapse:collapse;width:100%;min-width:640px;font-size:.95rem}
@@ -76,8 +71,9 @@ footer{margin-top:64px;background:var(--ink);color:#c9d3e6;padding:48px 0 40px}
 footer h2{color:#fff}
 footer a{color:#fff}
 footer p{margin-bottom:8px}
-footer a.btn{color:#fff;background:var(--accent)}
-@media(max-width:720px){.hero{padding:44px 0 36px}.plan{padding:22px}.price{text-align:left}.get ul{columns:1}.factors{grid-template-columns:1fr}nav .wrap{flex-wrap:wrap}nav ul{gap:14px}}
+footer a.btn{color:#fff}
+@media(max-width:860px){.plans{grid-template-columns:1fr}}
+@media(max-width:720px){.hero{padding:44px 0 36px}.factors{grid-template-columns:1fr}nav .wrap{flex-wrap:wrap}nav ul{gap:14px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
 </head>
@@ -105,16 +101,14 @@ footer a.btn{color:#fff;background:var(--accent)}
 <main class="wrap">
 
 <section id="plans">
+  <div class="plans">
 
-  <article class="plan" id="plan-1">
-    <span class="type">One-time</span>
-    <div class="head">
-      <h3>Plan 1: Growth Audit and Roadmap</h3>
-      <p class="price">₹7,500 – ₹20,000<span class="per">One-time payment</span></p>
-    </div>
-    <p class="quote">“I’ll show you what’s happening, what’s wrong, and what to do next.”</p>
-    <div class="get">
-      <b>You receive</b>
+    <article class="plan">
+      <span class="type">One-time</span>
+      <h3>Growth Audit and Roadmap</h3>
+      <p class="price">₹7,500 – ₹20,000</p>
+      <p class="per">One-time payment</p>
+      <p class="quote">“I’ll show you what’s happening, what’s wrong, and what to do next.”</p>
       <ul>
         <li>Complete Growth Audit</li>
         <li>Competitor Snapshot</li>
@@ -122,92 +116,41 @@ footer a.btn{color:#fff;background:var(--accent)}
         <li>30/60/90-Day Roadmap</li>
         <li>Recommended Growth Plan</li>
       </ul>
-    </div>
-    <p><a href="services.html#plan-1">See everything I analyse</a></p>
-    <a class="btn" href="contact.html">Ask about the audit</a>
-  </article>
+      <p class="more"><a href="services.html#plan-1">See everything I analyse</a></p>
+      <a class="btn" href="contact.html">Ask about the audit</a>
+    </article>
 
-  <article class="plan" id="plan-2">
-    <span class="type">Monthly</span>
-    <div class="head">
-      <h3>Plan 2: Local Visibility Growth</h3>
-      <p class="price">₹30,000 – ₹50,000<span class="per">Per month</span></p>
-    </div>
-    <p class="quote">“I’ll improve your Google and local search visibility.”</p>
+    <article class="plan">
+      <span class="type">Monthly</span>
+      <h3>Local Visibility Growth</h3>
+      <p class="price">₹30,000 – ₹50,000</p>
+      <p class="per">Per month</p>
+      <p class="quote">“I’ll improve your Google and local search visibility.”</p>
+      <ul>
+        <li>Complete SEO implementation: website, technical and off-page SEO</li>
+        <li>Local visibility growth: Google Business Profile, Google Maps and local SEO</li>
+        <li>Clear monthly report with insights and next steps</li>
+      </ul>
+      <p class="more"><a href="services.html#plan-2">See what I work on</a></p>
+      <a class="btn" href="contact.html">Ask about local growth</a>
+    </article>
 
-    <p class="label">What I work on</p>
-    <div class="groups">
-      <div>
-        <h4>Website SEO</h4>
-        <p class="goal">Make the website easier for Google and customers to understand.</p>
-        <ul><li>Website architecture</li><li>URL structure</li><li>Metadata</li><li>Headings</li><li>SEO-friendly content</li><li>Service pages</li><li>Location pages</li><li>Internal linking</li><li>Image optimization</li><li>Keyword targeting</li><li>User experience elements</li><li>Conversion-focused pages</li></ul>
-      </div>
-      <div>
-        <h4>Technical SEO</h4>
-        <p class="goal">Make the website healthy, crawlable and indexable.</p>
-        <ul><li>Crawlability</li><li>Indexing</li><li>Sitemap</li><li>Robots.txt</li><li>Canonicalization</li><li>Redirects</li><li>Broken links</li><li>Duplicate content</li><li>Page performance</li><li>Mobile usability</li><li>Core technical issues</li><li>Search Console issues</li><li>Website crawl health</li></ul>
-      </div>
-      <div>
-        <h4>Authority and Off-Page SEO</h4>
-        <p class="goal">Build trust and authority.</p>
-        <ul><li>Strategic link building</li><li>Guest posting</li><li>Outreach</li><li>Business listings</li><li>Relevant directories</li><li>Digital PR opportunities</li><li>Authority citations</li><li>Content-based link acquisition</li><li>Reddit, Quora, Medium and other relevant authoritative platforms</li></ul>
-      </div>
-      <div>
-        <h4>Local SEO and Google Business Profile</h4>
-        <p class="goal">Get found by local customers.</p>
-        <ul><li>Google Business Profile optimization</li><li>Primary and secondary categories</li><li>Services and products</li><li>Business information</li><li>Local keyword targeting</li><li>Google Maps visibility</li><li>Local landing pages</li><li>NAP consistency</li><li>Business listings and citations</li><li>Competitor analysis</li><li>Review strategy</li></ul>
-      </div>
-    </div>
+    <article class="plan">
+      <span class="type">Monthly</span>
+      <h3>Complete Growth Partnership</h3>
+      <p class="price">₹60,000 – ₹1,00,000+</p>
+      <p class="per">Per month</p>
+      <p class="quote">“I’ll work as your external search growth partner.”</p>
+      <ul>
+        <li>Full-service SEO: baseline audit, local, website, technical and off-page SEO</li>
+        <li>AI visibility: AEO and GEO to help your brand appear in AI-powered answers</li>
+        <li>Ongoing consultancy and growth strategy, with monthly reporting</li>
+      </ul>
+      <p class="more"><a href="services.html#plan-3">See everything included</a></p>
+      <a class="btn" href="contact.html">Ask about the partnership</a>
+    </article>
 
-    <p class="label">Monthly reporting</p>
-    <p>A clear report each month covering search visibility, keyword movement, Google Business Profile performance, website traffic, leads and enquiries where tracking is available, work completed, key insights and next month’s priorities.</p>
-    <a class="btn" href="contact.html">Ask about local growth</a>
-  </article>
-
-  <article class="plan" id="plan-3">
-    <span class="type">Monthly</span>
-    <div class="head">
-      <h3>Plan 3: Complete Growth Partnership</h3>
-      <p class="price">₹60,000 – ₹1,00,000+<span class="per">Per month</span></p>
-    </div>
-    <p class="quote">“I’ll work as your external search growth partner.”</p>
-
-    <p class="base"><b>Starts with the baseline.</b> We begin with the full Growth Audit and Roadmap from Plan 1, so every action is built on a clear picture of where you stand.</p>
-
-    <p class="label">Then I work across all five areas</p>
-    <div class="groups">
-      <div>
-        <h4>Local SEO and Google Business Profile</h4>
-        <p class="goal">Get found by local customers.</p>
-        <ul><li>Google Business Profile optimization</li><li>Primary and secondary categories</li><li>Services and products</li><li>Business information</li><li>Local keyword targeting</li><li>Google Maps visibility</li><li>Local landing pages</li><li>NAP consistency</li><li>Business listings and citations</li><li>Competitor analysis</li><li>Review strategy</li></ul>
-      </div>
-      <div>
-        <h4>Website SEO</h4>
-        <p class="goal">Make the website easier for Google and customers to understand.</p>
-        <ul><li>Website architecture</li><li>URL structure</li><li>Metadata</li><li>Headings</li><li>SEO-friendly content</li><li>Service pages</li><li>Location pages</li><li>Internal linking</li><li>Image optimization</li><li>Keyword targeting</li><li>User experience elements</li><li>Conversion-focused pages</li></ul>
-      </div>
-      <div>
-        <h4>Technical SEO</h4>
-        <p class="goal">Make the website healthy, crawlable and indexable.</p>
-        <ul><li>Crawlability</li><li>Indexing</li><li>Sitemap</li><li>Robots.txt</li><li>Canonicalization</li><li>Redirects</li><li>Broken links</li><li>Duplicate content</li><li>Page performance</li><li>Mobile usability</li><li>Core technical issues</li><li>Search Console issues</li><li>Website crawl health</li></ul>
-      </div>
-      <div>
-        <h4>Authority and Off-Page SEO</h4>
-        <p class="goal">Build trust and authority.</p>
-        <ul><li>Strategic link building</li><li>Guest posting</li><li>Outreach</li><li>Business listings</li><li>Relevant directories</li><li>Digital PR opportunities</li><li>Authority citations</li><li>Content-based link acquisition</li><li>Reddit, Quora, Medium and other relevant authoritative platforms</li></ul>
-      </div>
-      <div>
-        <h4>AI Search, AEO and GEO</h4>
-        <p class="goal">Improve visibility beyond traditional Google blue links.</p>
-        <ul><li>Answer Engine Optimization (AEO)</li><li>Generative Engine Optimization (GEO)</li><li>AI-search visibility</li><li>Structured content</li><li>Entity and topic authority</li><li>Question-based content</li><li>FAQ optimization</li><li>Schema markup</li><li>AI citation opportunities</li><li>Content designed for search and answer experiences</li></ul>
-      </div>
-    </div>
-
-    <p class="label">Ongoing partnership</p>
-    <p>Ongoing SEO consultancy and strategic growth recommendations, with monthly reporting that follows the full journey: visibility, traffic, engagement, enquiries, work completed, insights and next-month priorities.</p>
-    <a class="btn" href="contact.html">Ask about the partnership</a>
-  </article>
-
+  </div>
 </section>
 
 <section id="compare">
@@ -220,9 +163,7 @@ footer a.btn{color:#fff;background:var(--accent)}
         <tr><th scope="row">Type</th><td>One-time</td><td>Monthly</td><td>Monthly</td></tr>
         <tr><th scope="row">Best for</th><td>Knowing where you stand and what to fix first</td><td>Businesses that need more local customers</td><td>Businesses that want a long-term search growth partner</td></tr>
         <tr><th scope="row">Baseline audit</th><td>Included</td><td>Not included</td><td>Included</td></tr>
-        <tr><th scope="row">Website SEO</th><td>Analysis</td><td>Ongoing work</td><td>Ongoing work</td></tr>
-        <tr><th scope="row">Technical SEO</th><td>Analysis</td><td>Ongoing work</td><td>Ongoing work</td></tr>
-        <tr><th scope="row">Authority and off-page SEO</th><td>Analysis</td><td>Ongoing work</td><td>Ongoing work</td></tr>
+        <tr><th scope="row">Website, technical and off-page SEO</th><td>Analysis</td><td>Ongoing work</td><td>Ongoing work</td></tr>
         <tr><th scope="row">Local SEO and Google Business Profile</th><td>Analysis</td><td>Ongoing work</td><td>Ongoing work</td></tr>
         <tr><th scope="row">AI search (AEO and GEO)</th><td>Opportunities identified</td><td>Not included</td><td>Ongoing work</td></tr>
         <tr><th scope="row">What you receive</th><td>Audit and 30/60/90-day roadmap</td><td>Monthly report</td><td>Monthly report and ongoing consultancy</td></tr>
